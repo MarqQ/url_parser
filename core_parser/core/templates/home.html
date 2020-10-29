@@ -36,6 +36,10 @@
                                                     aria-controls="collapseOne">
                                                 {{ u.url}}
                                             </p>
+                                            <a class="btn btn-danger btn-sm float-right" href="/delete/{{ u.id }}/">
+                                                <i class="fas fa-trash"></i>
+                                                Delete
+                                            </a>
                                         </h5>
                                     </div>
 
@@ -48,21 +52,6 @@
                                 </div>
                             </div>
                             {% endfor %}
-<!--                            <div class="mb-5">-->
-<!--                                {% for u in url %}-->
-<!--                                <p>-->
-<!--                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample"-->
-<!--                                       role="button" aria-expanded="false" aria-controls="collapseExample">-->
-<!--                                        {{ u.url }}-->
-<!--                                    </a>-->
-<!--                                </p>-->
-<!--                                <div class="collapse" id="collapseExample">-->
-<!--                                    <div class="card card-body">-->
-<!--                                        {{ u.file }}-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                {% endfor %}-->
-<!--                            </div>-->
                         </form>
                     </div>
                 </div>
