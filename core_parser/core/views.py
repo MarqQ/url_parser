@@ -58,7 +58,7 @@ def get_all_links(url):
         get_all_links(link)
 
 
-# def fornecedoresDelete(request, id):
-#     fornecedor = Fornecedor.objects.get(id=id)
-#     fornecedor.delete()
-#     return redirect('fornecedores')
+def data_delete(request, id):
+    data = MainUrl.objects.get(id=id)
+    data.delete()
+    return redirect('/')
