@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('url_validation', views.url_validation, name='home'),
+    path('delete/<id>/', views.data_delete, name='home'),
 ]
