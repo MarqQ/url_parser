@@ -10,9 +10,6 @@ from .models import MainUrl
 def home(request):
     url = MainUrl.objects.filter()
 
-    for u in url:
-        print(u['file'])
-
     return render(request, 'home.html', {'url': url})
 
 
