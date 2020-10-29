@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +26,43 @@
                                     <button type="submit" class="btn btn-primary btn-block ml-auto">Submit</button>
                                 </div>
                             </div>
+                            {% for u in url %}
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <p class="btn btn-link" data-toggle="collapse"
+                                                    data-target="#collapseOne{{ u.id }}" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                {{ u.url}}
+                                            </p>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseOne{{ u.id }}" class="collapse show" aria-labelledby="headingOne"
+                                         data-parent="#accordion">
+                                        <div class="card-body">
+                                            {{ u.file }} {{ content }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+<!--                            <div class="mb-5">-->
+<!--                                {% for u in url %}-->
+<!--                                <p>-->
+<!--                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample"-->
+<!--                                       role="button" aria-expanded="false" aria-controls="collapseExample">-->
+<!--                                        {{ u.url }}-->
+<!--                                    </a>-->
+<!--                                </p>-->
+<!--                                <div class="collapse" id="collapseExample">-->
+<!--                                    <div class="card card-body">-->
+<!--                                        {{ u.file }}-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                {% endfor %}-->
+<!--                            </div>-->
                         </form>
                     </div>
                 </div>
