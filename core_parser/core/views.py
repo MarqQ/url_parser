@@ -5,11 +5,13 @@ import csv
 import uuid
 import json
 from .models import MainUrl
-from .models import SecondaryUrl
 
 
 def home(request):
     url = MainUrl.objects.filter()
+
+    for u in url:
+        print(u['file'])
 
     return render(request, 'home.html', {'url': url})
 
